@@ -50,10 +50,7 @@ def generate_launch_description():
                             ]
                         )
                     ]
-                ),
-                launch_arguments={
-                    "ur_type": LaunchConfiguration("ur_type"),
-                }.items(),
+                )
             )
         ]
     )

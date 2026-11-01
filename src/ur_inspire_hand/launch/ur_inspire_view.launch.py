@@ -2,7 +2,7 @@
 """Visualise the combined UR arm + Inspire RH56 hand in RViz only (no Gazebo).
 
     ros2 launch ur_inspire_hand ur_inspire_view.launch.py
-    ros2 launch ur_inspire_hand ur_inspire_view.launch.py ur_type:=ur10
+    ros2 launch ur_inspire_hand ur_inspire_view.launch.py
 
 Joints can be moved with the joint_state_publisher_gui window.
 """
@@ -17,12 +17,6 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     declared_arguments = [
-        DeclareLaunchArgument(
-            "ur_type",
-            default_value="ur5",
-            description="UR arm type: ur3, ur5, ur10, ur3e, ur5e, ur7e, ur10e, "
-            "ur12e, ur16e, ur20, ur30",
-        ),
         DeclareLaunchArgument(
             "name",
             default_value="ur_inspire_hand",
@@ -45,7 +39,6 @@ def generate_launch_description():
         ),
     ]
 
-    ur_type = LaunchConfiguration("ur_type")
     name = LaunchConfiguration("name")
     hand_xyz = LaunchConfiguration("hand_xyz")
     hand_rpy = LaunchConfiguration("hand_rpy")
@@ -61,8 +54,6 @@ def generate_launch_description():
                 [
                     "xacro ",
                     xacro_file,
-                    " ur_type:=",
-                    ur_type,
                     " name:=",
                     name,
                     " hand_xyz:=\"",

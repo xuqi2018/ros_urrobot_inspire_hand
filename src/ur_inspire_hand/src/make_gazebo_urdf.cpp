@@ -23,7 +23,7 @@
 //
 // Usage (arguments are passed straight to xacro)::
 //
-//     make_gazebo_urdf robot.urdf.xacro ur_type:=ur5 name:=ur_inspire_hand
+//     make_gazebo_urdf robot.urdf.xacro name:=ur_inspire_hand
 //
 // Behavioural contract (identical to the Python version):
 //   * runs ``xacro <args...>`` with stdout/stderr captured;

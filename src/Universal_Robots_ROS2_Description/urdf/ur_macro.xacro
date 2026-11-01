@@ -62,7 +62,6 @@
     kinematics_parameters_file
     physical_parameters_file
     visual_parameters_file
-    ur_type:=unknown
     generate_ros2_control_tag:=true
     transmission_hw_interface:=hardware_interface/PositionJointInterface
     safety_limits:=false
@@ -143,7 +142,6 @@
         trajectory_port="${trajectory_port}"
         non_blocking_read="${non_blocking_read}"
         keep_alive_count="${keep_alive_count}"
-        ur_type="${ur_type}"
         verify_robot_model="${verify_robot_model}"
         use_currents_as_efforts="${use_currents_as_efforts}"
         />
