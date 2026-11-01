@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ur_inspire_hand</name>
+  <version>1.0.0</version>
+  <description>
+    Combined robot description: Universal Robots UR arm (default UR5) with the
+    Inspire Robots RH56DFX right dexterous hand mounted on the tool flange,
+    ready for Gazebo classic simulation and RViz visualisation on ROS 2 Humble.
+  </description>
+  <maintainer email="dev@example.com">ros_hand</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <!-- Build tooling -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencies -->
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>sensor_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>control_msgs</depend>
+  <depend>ur_description</depend>
+  <depend>xacro</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>joint_state_broadcaster</depend>
+  <depend>joint_trajectory_controller</depend>
+  <depend>controller_manager</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros2_control</depend>
+  <depend>rviz2</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
