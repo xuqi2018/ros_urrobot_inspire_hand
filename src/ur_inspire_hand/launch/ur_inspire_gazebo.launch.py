@@ -2,7 +2,7 @@
 """Launch the combined UR arm + Inspire RH56 hand in Gazebo (classic, Gazebo 11).
 
     ros2 launch ur_inspire_hand ur_inspire_gazebo.launch.py
-    ros2 launch ur_inspire_hand ur_inspire_gazebo.launch.py ur_type:=ur10 gui:=false
+    ros2 launch ur_inspire_hand ur_inspire_gazebo.launch.py gui:=false
     ros2 launch ur_inspire_hand ur_inspire_gazebo.launch.py use_rviz:=false
 
 What it starts:
@@ -35,12 +35,6 @@ from launch_ros.substitutions import FindPackagePrefix, FindPackageShare
 def generate_launch_description():
     # ------------------------- arguments -------------------------
     declared_arguments = [
-        DeclareLaunchArgument(
-            "ur_type",
-            default_value="ur5",
-            description="UR arm type: ur3, ur5, ur10, ur3e, ur5e, ur7e, ur10e, "
-            "ur12e, ur16e, ur20, ur30",
-        ),
         DeclareLaunchArgument(
             "name",
             default_value="ur_inspire_hand",
@@ -85,7 +79,6 @@ def generate_launch_description():
         ),
     ]
 
-    ur_type = LaunchConfiguration("ur_type")
     name = LaunchConfiguration("name")
     gui = LaunchConfiguration("gui")
     use_rviz = LaunchConfiguration("use_rviz")
@@ -118,8 +111,6 @@ def generate_launch_description():
                     ),
                     " ",
                     xacro_file,
-                    " ur_type:=",
-                    ur_type,
                     " name:=",
                     name,
                     " hand_xyz:=\"",
