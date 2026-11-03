@@ -72,6 +72,5 @@ world
 `ros-humble-joint-state-publisher-gui`、`ros-humble-ros2controlcli`、`ros-humble-tf2-ros`。
 
 ## 五.运行效果：
-![alt text](image.png)
-
-![alt text](image-1.png)
+![init](assets/image-init.png)
+![first](assets/image-first.png)
